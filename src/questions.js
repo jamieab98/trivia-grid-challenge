@@ -1,4 +1,4 @@
-const scienceQuestions = [
+export const scienceQuestions = [
     {id: 1, question: "What is the name of the galaxy we are in?", answer: "The Milky Way"},
     {id: 2, question: "Who is responsible for the saying 'What comes up, must come down'?", answer: "Sir Isaac Newton"},
     {id: 3, question: "What makes up 71% of Earth?", answer: "Water"},

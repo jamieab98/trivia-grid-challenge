@@ -1,11 +1,10 @@
-import { scienceQuestions } from "./questions"
+import QuestionCards from "./components/QuestionCard"
 
 function App() {
-  console.log(scienceQuestions)
 
   return(
     <>
-      <div>Hello</div>
+      <QuestionCards/>
     </>
   )
 }

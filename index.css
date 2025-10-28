@@ -1,3 +1,8 @@
 #page{
     background-color: #68ba7f;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+}

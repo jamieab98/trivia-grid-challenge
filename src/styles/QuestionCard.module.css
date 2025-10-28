@@ -1,13 +1,15 @@
 .questionGrid{
     border: 1px solid red;
-    display: grid;
-    grid-template-columns: 15% 15% 15% 15%;
-    gap: 20px;
-    min-width: 1000px;
+    width: 800px;
     height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 .questionCard{
     border: 1px solid black;
-
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

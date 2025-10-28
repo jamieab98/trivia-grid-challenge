@@ -1,5 +1,4 @@
 .questionGrid{
-    border: 1px solid red;
     width: 800px;
     height: 500px;
     display: grid;
@@ -8,8 +7,10 @@
 
 .questionCard{
     border: 1px solid black;
+    border-radius: 5px;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #CFFFDC;
 }

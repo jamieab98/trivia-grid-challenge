@@ -3,7 +3,7 @@
     height: 500px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    display: none;
+    display: show;
 }
 
 .questionCard{

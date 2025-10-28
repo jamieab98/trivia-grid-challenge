@@ -1,0 +1,8 @@
+.displayedQuestion{
+    background-color: #2e6f40;
+    width: 800px;
+    height: 500px;
+    border: 5px solid #253d2c;
+    border-radius: 10px;
+    display: show;
+}

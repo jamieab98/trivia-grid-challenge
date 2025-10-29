@@ -7,15 +7,15 @@ import { useState } from "react"
 function App() {
   const [displayCard, setDisplayCard] = useState(false);
 
-  const flipCard = () => {
+  const changeDisplay = () => {
     setDisplayCard((prev) => !prev);
-  };
+  }
 
   return(
     <div className={styles.app}>
       <Header/>
-      <QuestionCards flipCard={flipCard} displayCard={displayCard}/>
-      <DisplayedQuestion flipCard={flipCard} displayCard={displayCard}/>
+      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard}/>
+      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard}/>
     </div>
   )
 }

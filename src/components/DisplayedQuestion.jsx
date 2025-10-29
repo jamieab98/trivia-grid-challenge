@@ -1,9 +1,9 @@
 import styles from "../styles/DisplayedQuestion.module.css"
 
-function DisplayedQuestion({flipCard, displayCard}) {
+function DisplayedQuestion({changeDisplay, displayCard}) {
 
     return(
-        <div className={`${displayCard ? styles.displayedQuestion : styles.invisible}`} onClick={() => flipCard()}>
+        <div className={`${displayCard ? styles.displayedQuestion : styles.invisible}`} onClick={() => changeDisplay()}>
             <>Displayed Question</>
         </div>
     )

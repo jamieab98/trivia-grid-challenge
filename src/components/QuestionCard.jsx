@@ -2,11 +2,12 @@ import { useState } from "react";
 import { scienceQuestions } from "../questions";
 import styles from "../styles/QuestionCard.module.css";
 
-function QuestionCards({changeDisplay, displayCard, changeQuestion}) {
+function QuestionCards({changeDisplay, displayCard, changeQuestion, setAnswer}) {
 
     function handleClick(question) {
         changeDisplay();
         changeQuestion(question);
+        setAnswer(question.answer);
     }
 
     return(

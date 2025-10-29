@@ -1,10 +1,16 @@
 import styles from "../styles/DisplayedQuestion.module.css"
 
-function DisplayedQuestion({changeDisplay, displayCard, selectedQuestion}) {
+function DisplayedQuestion({changeDisplay, displayCard, selectedQuestion, displayAnswer}) {
 
     return(
-        <div className={`${displayCard ? styles.displayedQuestion : styles.invisible}`} onClick={() => changeDisplay()}>
-            <div className={styles.questionText}>{selectedQuestion}</div>
+        <div>
+            <div className={`${displayCard ? styles.displayedQuestion : styles.invisible}`}>
+                <div className={styles.questionText} onClick={() => displayAnswer()}>{selectedQuestion}</div>
+            </div>
+            <div className={`${displayCard ? styles.answerButton : styles.invisible}`}>
+                <div className={styles.answerBackground} onClick={() => changeDisplay()}>Correct</div>
+                <div className={styles.answerBackground} onClick={() => changeDisplay()}>Incorrect</div>
+            </div>
         </div>
     )
 }

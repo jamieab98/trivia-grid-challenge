@@ -8,6 +8,20 @@
     align-items: center;
 }
 
+.answerButton{
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.answerBackground{
+    background-color: #cfffdc;
+    border: 1px solid black;
+    height: 25px;
+    width: 100px;
+    text-align: center;
+}
+
 .questionText{
     text-align: center;
 }

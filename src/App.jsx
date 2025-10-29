@@ -6,7 +6,8 @@ import { useState } from "react"
 
 function App() {
   const [displayCard, setDisplayCard] = useState(false);
-  const [selectedQuestion, setSelectedQuestion] = useState("")
+  const [selectedQuestion, setSelectedQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
   const changeDisplay = () => {
     setDisplayCard((prev) => !prev);
@@ -14,14 +15,17 @@ function App() {
 
   function changeQuestion(question){
     setSelectedQuestion(question.question);
-    console.log(question.question)
+  }
+
+  const displayAnswer = () => {
+    console.log(answer)
   }
 
   return(
     <div className={styles.app}>
       <Header/>
-      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion}/>
-      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion}/>
+      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion} setAnswer={setAnswer}/>
+      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion} displayAnswer={displayAnswer}/>
     </div>
   )
 }

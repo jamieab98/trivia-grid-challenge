@@ -6,16 +6,22 @@ import { useState } from "react"
 
 function App() {
   const [displayCard, setDisplayCard] = useState(false);
+  const [selectedQuestion, setSelectedQuestion] = useState("")
 
   const changeDisplay = () => {
     setDisplayCard((prev) => !prev);
   }
 
+  function changeQuestion(question){
+    setSelectedQuestion(question.question);
+    console.log(question.question)
+  }
+
   return(
     <div className={styles.app}>
       <Header/>
-      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard}/>
-      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard}/>
+      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion}/>
+      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion}/>
     </div>
   )
 }

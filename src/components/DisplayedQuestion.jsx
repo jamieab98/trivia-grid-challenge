@@ -4,7 +4,7 @@ function DisplayedQuestion({changeDisplay, displayCard, selectedQuestion}) {
 
     return(
         <div className={`${displayCard ? styles.displayedQuestion : styles.invisible}`} onClick={() => changeDisplay()}>
-            <>{selectedQuestion}</>
+            <div className={styles.questionText}>{selectedQuestion}</div>
         </div>
     )
 }

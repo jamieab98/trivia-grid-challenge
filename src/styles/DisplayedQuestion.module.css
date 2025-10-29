@@ -5,7 +5,8 @@
     border: 5px solid #253d2c;
     font-size: 50px;   
     display: flex;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .answerButton{
@@ -23,7 +24,9 @@
 }
 
 .questionText{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .invisible{

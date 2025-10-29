@@ -5,7 +5,7 @@ function QuestionCards({flipCard, displayCard}) {
 
     return(
         <div>
-            <div className={`${styles.questionGrid} ${displayCard ? styles.invisible : styles.visible}`}>
+            <div className={`${displayCard ? styles.invisible : styles.questionGrid}`}>
                 {scienceQuestions.map((question, index) => (
                     <div className={styles.questionCard} key={index} onClick={() => flipCard()}>
                         <div>Question Number {question.id}</div>

@@ -1,11 +1,11 @@
 import styles from "../styles/Header.module.css"
 
-function Header() {
+function Header({score}) {
 
     return(
         <div className={styles.header}>
             <h2>Trivia Grid Challenge</h2>
-            <h3 className={styles.score}>Current Score: </h3>
+            <h3 className={styles.score}>Current Score: {score}</h3>
         </div>
     )
 }

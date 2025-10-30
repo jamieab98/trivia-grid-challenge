@@ -10,6 +10,8 @@ function App() {
   const [selectedQuestion, setSelectedQuestion] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [showAnswer, setShowAnswer] = useState(false);
+  const [points, setPoints] = useState(0);
+  const [score, setScore] = useState(0);
 
   const changeDisplay = () => {
     setDisplayCard((prev) => !prev);
@@ -24,17 +26,24 @@ function App() {
     setDisplayCard(false);
   }
 
-  const returnToGrid = () => {
+  const returnToGridIncorrect = () => {
     setDisplayCard(false);
     setDisplayGrid(true);
     setShowAnswer(false);
   }
 
+  const returnToGridCorrect = () => {
+    setDisplayCard(false);
+    setDisplayGrid(true);
+    setShowAnswer(false);
+    setScore(points + score);
+  }
+
   return(
     <div className={styles.app}>
-      <Header/>
-      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion} setCorrectAnswer={setCorrectAnswer} correctAnswer={correctAnswer} displayGrid={displayGrid} setDisplayGrid={setDisplayGrid}/>
-      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion} displayAnswer={displayAnswer} showAnswer={showAnswer} correctAnswer={correctAnswer} returnToGrid={returnToGrid}/>
+      <Header score={score}/>
+      <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion} setCorrectAnswer={setCorrectAnswer} correctAnswer={correctAnswer} displayGrid={displayGrid} setDisplayGrid={setDisplayGrid} setPoints={setPoints}/>
+      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion} displayAnswer={displayAnswer} showAnswer={showAnswer} correctAnswer={correctAnswer} returnToGridIncorrect={returnToGridIncorrect} returnToGridCorrect={returnToGridCorrect}/>
     </div>
   )
 }

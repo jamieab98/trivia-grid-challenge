@@ -1,13 +1,14 @@
 import { scienceQuestions } from "../questions";
 import styles from "../styles/QuestionCard.module.css";
 
-function QuestionCards({changeDisplay, displayGrid, changeQuestion, setCorrectAnswer, setDisplayGrid}) {
+function QuestionCards({changeDisplay, displayGrid, changeQuestion, setCorrectAnswer, setDisplayGrid, setPoints}) {
 
     function handleClick(question) {
         changeDisplay();
         changeQuestion(question);
         setCorrectAnswer(question.answer);
         setDisplayGrid(false);
+        setPoints(question.points);
     }
 
     return(

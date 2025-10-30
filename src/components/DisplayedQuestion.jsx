@@ -1,6 +1,6 @@
 import styles from "../styles/DisplayedQuestion.module.css"
 
-function DisplayedQuestion({changeDisplay, displayCard, selectedQuestion, displayAnswer, showAnswer, correctAnswer}) {
+function DisplayedQuestion({returnToGrid, displayCard, selectedQuestion, displayAnswer, showAnswer, correctAnswer}) {
 
     return(
         <div>
@@ -12,8 +12,8 @@ function DisplayedQuestion({changeDisplay, displayCard, selectedQuestion, displa
             <div className={`${showAnswer ? styles.answer : styles.invisible}`}>
                 <div className={styles.answerBox}>{correctAnswer}</div>
                 <div className={styles.userResponse}>
-                    <div className={styles.responseButton} onClick={() => changeDisplay()}>Correct</div>
-                    <div className={styles.responseButton} onClick={() => changeDisplay()}>Incorrect</div>
+                    <div className={styles.responseButton} onClick={() => returnToGrid()}>Correct</div>
+                    <div className={styles.responseButton} onClick={() => returnToGrid()}>Incorrect</div>
                 </div>
             </div>
         </div>

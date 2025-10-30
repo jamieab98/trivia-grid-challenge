@@ -24,11 +24,17 @@ function App() {
     setDisplayCard(false);
   }
 
+  const returnToGrid = () => {
+    setDisplayCard(false);
+    setDisplayGrid(true);
+    setShowAnswer(false);
+  }
+
   return(
     <div className={styles.app}>
       <Header/>
       <QuestionCards changeDisplay={changeDisplay} displayCard={displayCard} changeQuestion={changeQuestion} setCorrectAnswer={setCorrectAnswer} correctAnswer={correctAnswer} displayGrid={displayGrid} setDisplayGrid={setDisplayGrid}/>
-      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion} displayAnswer={displayAnswer} showAnswer={showAnswer} correctAnswer={correctAnswer}/>
+      <DisplayedQuestion changeDisplay={changeDisplay} displayCard={displayCard} selectedQuestion={selectedQuestion} displayAnswer={displayAnswer} showAnswer={showAnswer} correctAnswer={correctAnswer} returnToGrid={returnToGrid}/>
     </div>
   )
 }

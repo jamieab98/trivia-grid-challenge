@@ -28,6 +28,7 @@
     align-items: center;
     background-color: #253d2c;
     text-decoration: line-through;
+    pointer-events: none;
 }
 
 .invisible{

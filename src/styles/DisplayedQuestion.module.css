@@ -9,18 +9,27 @@
     justify-content: center;
 }
 
-.answerButton{
-    padding-top: 25px;
+.answerBox{
+    background-color: rgb(166, 166, 250);
+    width: 800px;
+    height: 500px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userResponse{
+    padding-top: 10px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.answerBackground{
+.responseButton{
+    font-size: 20px;
     background-color: #cfffdc;
-    border: 1px solid black;
-    height: 25px;
-    width: 100px;
-    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .questionText{

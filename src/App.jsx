@@ -36,7 +36,7 @@ function App() {
     setDisplayCard(false);
     setDisplayGrid(true);
     setShowAnswer(false);
-    setScore(points + score);
+    setScore(prev => prev + points);
   }
 
   return(

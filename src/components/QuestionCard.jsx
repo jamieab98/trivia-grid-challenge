@@ -1,7 +1,9 @@
 import { scienceQuestions } from "../questions";
 import styles from "../styles/QuestionCard.module.css";
+import { useState } from "react";
 
 function QuestionCards({changeDisplay, displayGrid, changeQuestion, setCorrectAnswer, setDisplayGrid, setPoints}) {
+    const [questions, setQuestions] = useState(scienceQuestions);
 
     function handleClick(question) {
         changeDisplay();
@@ -14,7 +16,7 @@ function QuestionCards({changeDisplay, displayGrid, changeQuestion, setCorrectAn
     return(
         <div>
             <div className={`${displayGrid ? styles.questionGrid : styles.invisible}`}>
-                {scienceQuestions.map((question, index) => (
+                {questions.map((question, index) => (
                     <div className={styles.questionCard} key={index} onClick={() => handleClick(question)}>
                         <div>Question Number {question.id}</div>
                         <div>Point Value: {question.points}</div>

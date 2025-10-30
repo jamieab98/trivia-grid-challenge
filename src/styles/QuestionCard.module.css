@@ -17,6 +17,19 @@
     background-color: #CFFFDC;
 }
 
+.answeredQuestion{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #253d2c;
+    text-decoration: line-through;
+}
+
 .invisible{
     display: none;
 }

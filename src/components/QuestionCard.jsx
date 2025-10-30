@@ -15,7 +15,7 @@ function QuestionCards({changeDisplay, displayGrid, changeQuestion, setCorrectAn
         <div>
             <div className={`${displayGrid ? styles.questionGrid : styles.invisible}`}>
                 {scienceQuestions.map((question, index) => (
-                    <div className={question.answered ? styles.answeredQuestion : styles.questionCard} key={index} onClick={() => handleClick(question)}>
+                    <div className={styles.questionCard} key={index} onClick={() => handleClick(question)}>
                         <div>Question Number {question.id}</div>
                         <div>Point Value: {question.points}</div>
                     </div>
